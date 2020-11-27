@@ -26,6 +26,7 @@ public class GlobalExceptionHandler {
     @ResponseBody
     public R  error(Exception e){
         e.printStackTrace();
+        log.error(e.getMessage());
         return R.error().message("执行全局异常");
     }
 
@@ -36,6 +37,7 @@ public class GlobalExceptionHandler {
     @ResponseBody
     public R error(ArithmeticException e){
         e.printStackTrace();
+        log.error(e.getMessage());
         return R.error().message("执行了自定义异常");
     }
 
@@ -46,6 +48,7 @@ public class GlobalExceptionHandler {
     @ResponseBody
     public R error(jxlException e){
         e.printStackTrace();
+        log.error(e.getMessage());
         return R.error().message(e.getMsg()).code(e.getCode());
     }
 

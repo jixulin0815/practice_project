@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 /**
  * @ClassName jxlException
  * @Description TODO
- * @Author Administrator
+ * @Author 自定义异常
  * @Date 2020/11/21 0021 21:49
  * @Version 1.0
  */
