@@ -3,7 +3,6 @@ package com.practice.serviceedu.controller;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.practice.commonutils.R;
-import com.practice.servicebase.exceptionhandler.jxlException;
 import com.practice.serviceedu.entity.EduTeacher;
 import com.practice.serviceedu.entity.vo.TeacherQuery;
 import com.practice.serviceedu.service.EduTeacherService;
