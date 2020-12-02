@@ -3,10 +3,7 @@ package com.practice.serviceedu.controller;
 import com.practice.commonutils.R;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @ClassName 用户登录类
@@ -16,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @Version 1.0
  */
 @RestController
+@CrossOrigin
 @RequestMapping("/eduservice/user")
 @Api(value = "用户登录")
 public class EduLoginController {
@@ -29,7 +27,7 @@ public class EduLoginController {
     @ApiOperation(value = "用户管理")
     @GetMapping("info")
     public R info(){
-        return R.ok().data("name","admin").data("","");
+        return R.ok().data("name","admin").data("roles","[JiCuLin]").data("avatar","null");
     }
 
 

@@ -63,15 +63,15 @@ public class EduTeacherController {
      * 分页插件
      */
     @ApiOperation(value = "分页讲师列表")
-    @PostMapping("{page}/{limit}")
+    @PostMapping("pageTeacherCondition{current}/{limit}")
     public R pageQuery(
-            @ApiParam(name = "page",value = "当前页码",required = true)
-            @PathVariable Long page,
+            @ApiParam(name = "current",value = "当前页码",required = true)
+            @PathVariable Long current,
             @ApiParam(name = "limit",value = "每页记录数",required = true)
             @PathVariable Long limit,
             @ApiParam(name = "teacherQuery",value = "查询对象",required = false)
             @RequestBody TeacherQuery teacherQuery){
-        Page<EduTeacher> pageParam = new Page<>(page,limit);
+        Page<EduTeacher> pageParam = new Page<>(current,limit);
         TeacherService.pageQuery(pageParam,teacherQuery);
         List<EduTeacher> recodes = pageParam.getRecords();
         long total = pageParam.getTotal();
