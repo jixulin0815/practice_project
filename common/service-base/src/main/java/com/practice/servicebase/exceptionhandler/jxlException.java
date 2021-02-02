@@ -13,7 +13,13 @@ import lombok.NoArgsConstructor;
  * @Version 1.0
  */
 @Data
+/**
+ * 生成有参构造
+ */
 @AllArgsConstructor
+/**
+ * 生成无参构造
+ */
 @NoArgsConstructor
 public class jxlException extends RuntimeException {
 
